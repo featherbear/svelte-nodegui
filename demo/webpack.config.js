@@ -97,7 +97,7 @@ module.exports = (env, argv) => {
         }
     };
 
-    if (argv.mode === "development" || config.mode === "development") {
+    if (argv.mode === "development") {
         config.mode = "development";
         config.plugins.push(new webpack.HotModuleReplacementPlugin());
         config.plugins.push(new ForkTsCheckerWebpackPlugin());
