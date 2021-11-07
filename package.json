@@ -1,16 +1,9 @@
 {
-  "name": "@nodegui/svelte-nodegui",
-  "version": "0.1.2",
-  "description": "Svelte integration for NodeGUI",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nodegui/svelte-nodegui.git"
-  },
-  "homepage": "https://github.com/nodegui/svelte-nodegui",
-  "keywords": [
-    "nodegui",
-    "svelte"
-  ],
+  "name": "CHANGEME",
+  "version": "1.0.0",
+  "author": "CHANGEME",
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "build": "npm-run-all build:prod build:pack",
     "clean": "rimraf ./dist/",
