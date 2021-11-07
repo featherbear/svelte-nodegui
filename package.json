@@ -12,11 +12,15 @@
     "svelte"
   ],
   "scripts": {
-    "clean": "npx rimraf ./dist/*",
-    "build": "npm run clean && rollup -c && node ./scripts/create-pkg.js",
-    "prepare": "npm run build",
-    "watch": "rollup -cw",
-    "deploy": "npm run build && cd dist && npm publish --access=public"
+    "build": "npm-run-all build:prod build:pack",
+    "clean": "rimraf ./dist/",
+    "dev": "npm-run-all clean -p build:dev start:live_wait",
+    "start:debug": "qode --inspect ./dist/index.js",
+    "start:live": "node livereload.js node_modules/.bin/qode ./dist/index.js",
+    "start:live_wait": "npx wait-on ./dist/index.js && npm run start:live",
+    "build:pack": "npx nodegui-packer --pack ./dist",
+    "build:prod": "webpack --mode production",
+    "build:dev": "webpack --mode development"
   },
   "author": "Jamie Birch (https://twitter.com/LinguaBrowse)",
   "contributors": [
