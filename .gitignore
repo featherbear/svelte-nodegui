@@ -9,3 +9,7 @@ docs_src/.sessions/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# NodeGUI
+/deploy/**/build/
+/dist/
